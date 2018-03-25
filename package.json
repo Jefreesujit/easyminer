@@ -1,0 +1,32 @@
+{
+  "name": "easyminer",
+  "version": "1.0.0",
+  "description": "A web based application that allows users to mine into any mining pools directly from  browser",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jefreesujit/easyminer.git"
+  },
+  "keywords": [
+    "easyminer",
+    "cryptocurrency",
+    "monero",
+    "electroneum",
+    "mining",
+    "pools",
+    "mining",
+    "pools",
+    "crypto",
+    "currency",
+    "bitcoin"
+  ],
+  "author": "Jefreesujit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jefreesujit/easyminer/issues"
+  },
+  "homepage": "https://github.com/Jefreesujit/easyminer#readme"
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Easy Pool Miner</title>
+    <meta name="description" content="Easy Pool Miner" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="src/css/materialize.min.css">
+    <link rel="stylesheet" href="src/css/main.css" type="text/css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="row">
+        <div class="logo-icon">
+        </div>
+        <div class="page-header">
+          Easy Pool Miner
+        </div>
+      </div>
+    </header>
+    <main id="body">
+      <div class="page-container">
+        <div class="center-pane">
+          <div class="row center">
+            <div class="col s12">
+              <div class="light description">
+                Tired of setting up mining softwares in your computers to mine cryptocurrencies?<br>
+                Ever thought of having a single place to mine any cryptocurrencies you want?
+              </div>
+              <h5 class="light message-box"> 
+                <p>Presenting you the <b class="title-text">Easy Pool Miner</b>,<br>
+                which allows you to mine any cryptocurrencies<sup>*</sup> into any mining pools you want!
+                <br>And best part is you dont have to set up any softwares! Everything is purely online!</p>
+              </h5>
+            </div>
+          </div>
+          <form class="row center pool-section" id="poolDetails" method="GET" action="miner">
+            <div class="col s12 pool-info">
+              <input type="text" placeholder="Enter your Mining Pool URL" name="pool" id="pool" class="pool-input" required>
+              <input type="number" placeholder="Port No" min=1 max=100000 name="port" id="port" class="port-input" required>
+            </div>
+            <div class="col s12 address">
+              <input type="text" placeholder="Enter Your Wallet Address" name="address" id="etnAddress" class="address-input" required>
+            </div>
+            <div class="col s12 get-started">
+              <input type="submit" value="Get Started" id="getStarted" class="btn mining-btn">
+            </div>
+          </form>
+          <div class="row center">
+              <div class="col s12">
+                <div class="light info-text">
+                  <sup>*</sup>Any Cryptocurrencies that follows <a href="https://cryptonote.org/coins" target="_blank">CryptoNote </a> Protocol can be mined using this site.
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript">          
+        var pairs = location.search.slice(1).split('&');
+        var result = {};
+        pairs.forEach(function(pair) {
+            pair = pair.split('=');
+            result[pair[0]] = decodeURIComponent(pair[1] || '');
+        });
+      var query_string = JSON.parse(JSON.stringify(result));
+      document.getElementById('pool').value = query_string['pool'] || '';
+      document.getElementById('port').value = parseInt(query_string['port']) || '';
+    </script>
+  </body>
+</html>

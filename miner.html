@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Easy Pool Miner</title>
+    <meta name="description" content="Easy Pool Miner" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="src/css/materialize.min.css">
+    <link rel="stylesheet" href="src/css/main.css" type="text/css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="row">
+        <div class="logo-icon">
+        </div>
+        <div class="page-header">
+          Easy Pool Miner
+        </div>
+      </div>
+    </header>
+    <main id="body">
+      <div class="page-container">
+        <div class="center-pane">
+          <div class="row center">
+            <div class="col s12">
+              <h5 class="light message-box"> 
+                Now, mine into mining pools directly from your browser!
+              </h5>
+              <p> This application connects directly to your desired mining pool, no mining software required!</p>
+            </div>
+          </div>
+          <div class="row center info-section" id="info_section">
+            <div>
+              <div class="col s8 info-field">
+                <span class="label">Mining Pool:</span>
+                <span class="pool-url value" id="poolUrl"></span>
+              </div>
+              <div class="col s2 info-field">
+                <span class="label">Port: </span>
+                <span class="pool-port value" id="poolPort"></span>
+              </div>
+            </div>
+            <div class="col s12 info-field">
+              <span class="label">Your Wallet Address</span>
+              <span class="wallet-address value" id="address"></span>
+            </div>
+          </div>
+          <div class="status-section" id="status_section">
+            <div class="display-field">
+              <span class="label">Hashes / Sec</span>
+              <div id="hashesPerSecond" class="value"></div>
+            </div>
+            <div class="display-field">
+              <span class="label">Mined Hashes</span>
+              <div id="totalHashes" class="value"></div>
+            </div>
+            <div class="display-field">
+              <span class="label">Accepted Hashes</span>
+              <div id="acceptedHashes" class="value"></div>
+            </div>
+            <div class="display-field">
+              <span class="label">Threads</span>
+              <input type="number" max="8" min="1" id="numThreads" class="value number">
+            </div>
+            <div class="display-field">
+              <span class="label">CPU Usage</span>
+              <input type="number" max="100" min="1" id="throttle" class="value number">
+            </div>
+            <div class="display-field">
+              <span class="label">Hash Difficulty</span>
+              <div id="difficulty" class="value"></div>
+            </div>
+          </div>
+          <div class="row center">
+            <div class="col s12 earnings-section">
+              <div class="info-field">
+                <span class="label">Daily Earnings</span>
+                <span class="earnings value" id="daily"></span>
+              </div>
+              <div class="info-field">
+                <span class="label">Weekly Earnings </span>
+                <span class="earnings value" id="weekly"></span>
+              </div>
+              <div class="info-field">
+                <span class="label">Monthly Earnings </span>
+                <span class="earnings value" id="monthly"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row center">
+            <div class="col s12">
+              <input type="button" value="Start Mining" id="startMiner" class="btn mining-btn">
+              <input type="button" value="Stop Mining" id="stopMiner" class="btn mining-btn hide">
+            </div>
+          </div>
+          <div class="row center">
+            <div class="col s12 message-box">
+              All your minings directly goes to your pool site. 
+              Kindly check with the respective mining pools for your mining rewards and balance.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        Built in ♥ With Cryptocurrency by <a href="https://jefreesujit.github.io" target="_blank"> Jefree Sujit</a>.
+      </div>
+    </footer>
+    <script type="text/javascript" src="src/js/advertisement.js"></script>
+    <script type="text/javascript" id="jquery" src="src/js/jquery-2.1.1.min.js"></script>
+  </body>
+</html>
