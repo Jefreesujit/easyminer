@@ -11,10 +11,23 @@ try {
   }, 3000);
 }
 
+const rewardHash = {
+  coins: 100,
+  etn: 100,
+  trtl: 100,
+  xdn: 100000000,
+  bcn: 100000000,
+  qcn: 1000000000000,
+  xmr: 1000000000000,
+  fcn: 1000000000000,
+  dash: 1000000000000,
+  aeon: 1000000000000
+};
+
 function getMinedCoins (days) {
   let difficulty = stats.difficulty,
       hashes = parseInt($('#hashesPerSecond').text()),
-      reward = window.currency === 'etn' ? stats.reward : stats.reward / 10000000000,
+      reward = stats.reward / rewardHash[window.currency],
       minedCoins = (((reward/difficulty) * hashes * days) || 0).toFixed(6);
 
   return `${minedCoins} ${window.currency}`;
@@ -43,11 +56,11 @@ function setDefaults () {
 
 function getStats () {
   $.get(window.apiUrl, function(data) {
-    stats = data.network;
+    stats = data.network || data;
     $('#difficulty').html(getDifficulty());
-    $('#daily').html(getMinedCoins(864));
-    $('#weekly').html(getMinedCoins(6048));
-    $('#monthly').html(getMinedCoins(25920));
+    $('#daily').html(getMinedCoins(86400));
+    $('#weekly').html(getMinedCoins(604800));
+    $('#monthly').html(getMinedCoins(2592000));
   });
 };
 
@@ -74,7 +87,7 @@ $('#throttle').on('blur', function(event) {
 
 $(document).ready(function() {
   var intervalId;
-
+  getStats();
   miner.on('open', function(params) {
     console.log('miner open');
     $('#startMiner').addClass('hide');
@@ -95,7 +108,6 @@ $(document).ready(function() {
   });
 
   setDefaults();
-  getStats();
   setInterval(function () {
       getStats();
   }, 30000);
