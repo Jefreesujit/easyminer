@@ -12,6 +12,9 @@ try {
 }
 
 const rewardHash = {
+  btc: 1,
+  eth: 1,
+  bch: 1,
   coins: 100,
   etn: 100,
   trtl: 100,
