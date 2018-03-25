@@ -11,10 +11,22 @@ try {
   }, 3000);
 }
 
+const rewardHash = {
+  etn: 100,
+  xmr: 1000000000000,
+  bcn: 1,
+  aeon: 1,
+  duck: 1,
+  dash: 1,
+  fcn: 1,
+  trtl: 1,
+  coins: 1
+};
+
 function getMinedCoins (days) {
   let difficulty = stats.difficulty,
       hashes = parseInt($('#hashesPerSecond').text()),
-      reward = window.currency === 'etn' ? stats.reward : stats.reward / 10000000000,
+      reward = stats.reward / rewardHash[window.currency],
       minedCoins = (((reward/difficulty) * hashes * days) || 0).toFixed(6);
 
   return `${minedCoins} ${window.currency}`;
@@ -43,11 +55,11 @@ function setDefaults () {
 
 function getStats () {
   $.get(window.apiUrl, function(data) {
-    stats = data.network;
+    stats = data.network || data;
     $('#difficulty').html(getDifficulty());
-    $('#daily').html(getMinedCoins(864));
-    $('#weekly').html(getMinedCoins(6048));
-    $('#monthly').html(getMinedCoins(25920));
+    $('#daily').html(getMinedCoins(86400));
+    $('#weekly').html(getMinedCoins(604800));
+    $('#monthly').html(getMinedCoins(2592000));
   });
 };
 
