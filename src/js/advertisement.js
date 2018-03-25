@@ -6,7 +6,7 @@ function getParameterByName(name) {
 }
 
 urlMapping = {
-	btc: 'https://whattomine.com/coins/1.json',
+	btc: 'https://api.blockchain.info/stats?cors=true',
 	eth: 'https://whattomine.com/coins/151.json',
 	bch: 'https://whattomine.com/coins/193.json',
 	etn: 'https://etn.crypto-coins.club/api/stats',
