@@ -10,10 +10,11 @@ urlMapping = {
 	xmr: 'https://mixpools.org:8117/stats',
 	bcn: 'https://bytecoin.uk:8117/stats',
 	trtl: 'https://pool.turtlecoin.fr:8117/stats',
-	duck: 'https://chainradar.com/api/v1/duck/status',
-	dash: 'https://chainradar.com/api/v1/dash/status',
+	aeon: 'https://api.aeon-pool.com/v1/stats',
+	qcn: 'https://chainradar.com/api/v1/qcn/status',
+	xdn: 'https://chainradar.com/api/v1/duck/status',
+	dsh: 'https://chainradar.com/api/v1/dsh/status',
 	fcn: 'https://chainradar.com/api/v1/fcn/status',
-	aeon: 'https://chainradar.com/api/v1/aeon/status',
 	coins: ''
 };
 

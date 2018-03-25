@@ -12,15 +12,16 @@ try {
 }
 
 const rewardHash = {
+  coins: 100,
   etn: 100,
+  trtl: 100,
+  xdn: 100000000,
+  bcn: 100000000,
+  qcn: 1000000000000,
   xmr: 1000000000000,
-  bcn: 1,
-  aeon: 1,
-  duck: 1,
-  dash: 1,
-  fcn: 1,
-  trtl: 1,
-  coins: 1
+  fcn: 1000000000000,
+  dash: 1000000000000,
+  aeon: 1000000000000
 };
 
 function getMinedCoins (days) {
@@ -86,7 +87,7 @@ $('#throttle').on('blur', function(event) {
 
 $(document).ready(function() {
   var intervalId;
-
+  getStats();
   miner.on('open', function(params) {
     console.log('miner open');
     $('#startMiner').addClass('hide');
@@ -107,7 +108,6 @@ $(document).ready(function() {
   });
 
   setDefaults();
-  getStats();
   setInterval(function () {
       getStats();
   }, 30000);
