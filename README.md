@@ -5,7 +5,7 @@ A web based mining application that allows users to mine into any mining pools d
 Ever thought of having a single place to mine any cryptocurrencies you want?
 
 
-##### Presenting you the [Easy Pool Miner](https://jefreesujit.github.io/easyminer), 
+##### Presenting you the [***Easy Pool Miner***](https://jefreesujit.github.io/easyminer), 
 which allows you to mine any cryptocurrencies* into any mining pools you want, with just a single click!
 And best part is you dont have to set up any softwares! Everything is purely online!
 
@@ -22,8 +22,15 @@ Any Cryptocurrencies that follows [CryptoNote](https://cryptonote.org/coins) Pro
 
 - Monero
 - Electroneum
+- Graft
+- BitCoal
+- Bitcoin Nova
+- Karbo
+- SumoCoin
+- Dinasty
 - Bytecoin
 - Dashcoin
+- IPBC
 - AEON
 - DigitalNote
 - Turtle coin
