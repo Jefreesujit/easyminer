@@ -28,6 +28,15 @@ Any Cryptocurrencies that follows [CryptoNote](https://cryptonote.org/coins) Pro
 - Karbo
 - SumoCoin
 - Dinasty
+- Fonero
+- Intense coin
+- Superior Coin
+- Masari
+- DERO
+- FreelaBit
+- Crepcoin
+- Haven
+- Stellite
 - Bytecoin
 - Dashcoin
 - IPBC
