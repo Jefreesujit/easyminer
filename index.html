@@ -42,7 +42,7 @@
               <input type="number" placeholder="Port No" min=1 max=100000 name="port" id="port" class="port-input" required>
             </div>
             <div class="col s12 address">
-              <select class="browser-default currency" required name="currency">
+              <select class="browser-default currency" required id="currency" name="currency">
                 <option value="" hidden>Select Currency</option>
                 <option value="xmr">Monero</option>
                 <option value="etn">Electroneum</option>
@@ -78,6 +78,13 @@
             </div>
           </form>
           <div class="row center">
+            <div class="col s12">
+              <div class="message-box">
+                <a href="https://bitmakler.net/pools" target="_blank">List of All available Coins and its Mining pools</a>
+              </div>
+            </div>
+        </div>
+          <div class="row center">
               <div class="col s12">
                 <div class="light info-text">
                   <sup>*</sup>Any Cryptocurrencies that follows <a href="https://en.bitcoin.it/wiki/Stratum_mining_protocol" target="_blank">Stratum Protocol</a> can be mined using this site.
@@ -95,8 +102,11 @@
             result[pair[0]] = decodeURIComponent(pair[1] || '');
         });
       var query_string = JSON.parse(JSON.stringify(result));
-      document.getElementById('pool').value = query_string['pool'] || '';
-      document.getElementById('port').value = parseInt(query_string['port']) || '';
+
+      for (let key in query_string) {
+        document.getElementById(key).value = query_string[key];
+        document.getElementById(key).setAttribute('readonly', true);
+      }
     </script>
   </body>
 </html>
