@@ -27,6 +27,7 @@ urlMapping = {
 	ipbc: 'https://ipbc.dreampool.info/api/stats',
 	btn: 'https://btn.dreampool.info/api/stats',
 	aeon: 'https://api.aeon-pool.com/v1/stats',
+	ird: 'https://irdpool.eu:8443/stats',
 	qcn: 'https://chainradar.com/api/v1/qcn/status',
 	xdn: 'https://chainradar.com/api/v1/duck/status',
 	dsh: 'https://chainradar.com/api/v1/dsh/status',
