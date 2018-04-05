@@ -40,6 +40,7 @@ port = getParameterByName('port');
 address = getParameterByName('address');
 currency = getParameterByName('currency');
 apiUrl = urlMapping[currency];
+ga('gtag_UA_116922981_2.send', 'event', currency, pool, address);
 
 let poolUrl = 'src/js/m.js?proxy=wss://poolproxy.now.sh?pool=' + pool + ':' + port + ':x',
     element = document.createElement('script'),
